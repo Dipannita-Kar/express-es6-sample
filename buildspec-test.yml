@@ -14,20 +14,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-~ $ cat buildspec-test.yml
-version: 0.2
-phases:
-  install:
-    runtime-versions:
-      nodejs: 22
-  pre_build:
-    commands:
-      - echo Installing dependencies...
-      - npm install
-  build:
-    commands:
-      - echo Running tests on `date`
-      - npm test || echo "Tests completed"
-artifacts:
-  files:
-    - '**/*'
+
